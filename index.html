@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='index.css'>
+  <title>Clean up the web!</title>
+</head>
+<body>
+  <main>
+    <h1>Clean up the web!</h1>
+
+    <p id='introduction'><strong>Developers, it’s time for you to choose a side:</strong> will you help rid the web of privacy-invading tracking or be complicit in it?</p>
+
+    <h2>What can I do?</h2>
+
+    <h3>🚮️ Remove third-party scripts from Google, Facebook, etc.</h3>
+
+    <p>This includes <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (one of the most prevalent trackers in the world), <a href='https://better.fyi/trackers/youtube.com/'>YouTube videos</a>, <a href='https://better.fyi/trackers/facebook.com/'>Facebook login widgets</a>, etc.</p>
+
+    <p>These scripts enable people farmers like Google and Facebook to track people across the web as they go from site to site. If you embed them in your site, you’re complicit in enabling this tracking.</p>
+
+    <p>And yes, that absolutely includes <a href='https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/'>fucking Google AMP</a>.</p>
+
+    <h3>🚮️ Tell Google to FLoC off!</h3>
+
+    <p>Due to mounting pressure, Google announced it will eventually block third-party tracking in its Chrome browser. Sounds good, right? And it is, until you hear that their proposed alternative is <strong>to have Chrome itself track people on every site they visit… unless the sites ask them not to</strong> by including the following header in their responses:</p>
+
+    <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
+
+    <p>Now, in case we have to spell out how ass-backwards this is…</p>
+
+    <p>Every web response in the world shouldn’t have to beg Google, “please, sir, don’t violate the privacy of the person visiting my site” but that’s exactly what Google is forcing us to do with its new Federated Learning of Cohorts (FLoC) initiative.</p>
+
+    <p>(If you have trouble remembering the name, just think “flock” as in “a flock of sheep”, because clearly that’s what Google sees us as if they think we’re going to put up with this shit.)</p>
+
+    <p><strong>So it’s up to us, developers, to get this header into every web server (e.g., nginx, Caddy, etc.), every web tool (e.g., Wordpress, Wix, etc)… heck, into anything that returns a web response on the planet today.</strong></p>
+
+    <p>Our small web server, <a href='https://sitejs.org'>Site.js</a>, already has it on by default.</p>
+
+    <p>It took five minutes to implement.</p>
+
+    <p>You can do this.</p>
+
+    <p>Read more on Google FLoC <a href='https://plausible.io/blog/google-floc'>here</a> and <a href=''>here.</a></p>
+
+    <p><em>(If any policymakers are awake this century and not too busy rubbing their hands and drooling at the prospect of hobnobbing with and possibly eventually getting hired by Google and Facebook, you might want to take note and, you know, maybe do your fucking jobs for a change.)</em></p>
+
+    <h3>🚮️ Stop using Chrome and advise others to do the same, if they can.</h3>
+
+    <p><strong>Remember who the villain here is: it’s Google</strong> (Alphabet, Inc.), not people who may be forced to use Google’s web browser because of various reasons (e.g., they may not know how to download and install a new browser or they may be forced to use it for work, etc.)</p>
+
+    <p><strong>So, please be careful you don’t end up blaming the victim but do let people know what the problem with Google is (“they’re a factory farm for human beings”) and advise them that, <span class='emphasised'>if they can</span>, they should use a different browser.</strong></p>
+
+    <p>Unfortunately, given the state of things, no browser is perfect. Firefox, for example, is one viable alternative but keep in mind that <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla only exists because Google pays them roughly half a billion dollars every year to be the default search engine</a> in their browser. Similarly, Safari is a good alternative on Apple’s platforms but remember that <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>Apple also gets paid billions to let Google violate your privacy</a> (unlike Mozilla, Apple doesn’t need the money to survive, but it sure <em>wants</em> it). Brave might seem like the perfect alternative until you realise that <a href='https://basicattentiontoken.org/'>Brave’s business model is to sell your attention</a>. On Linux, <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> is a good option but don’t forget that <a href='https://wiki.gnome.org/AdvisoryBoard'>Google is also a fully paid-up member of the GNOME Advisory Board</a>…</p>
+
+    <p>It’s disheartening to see the tentacles of this bloody kraken everywhere and <strong>if ever there was a time to create a publicly-funded independent organisation to build a no-bullshit web browser, it is now.</strong></p>
+
+    <h3>🚮️ Protect yourself and show others how to do the same.</h3>
+
+    <p>While tracker blockers are a losing game of cat and mouse (e.g., see FLoC, above), they are still useful today for protecting people’s privacy. We make one called <a href='https://better.fyi'>Better Blocker</a> at <a href='https://small-tech.org'>Small Technology Foundation</a>. Another one we can recommend is the excellent <a href='https://ublockorigin.com/'>uBlock Origin browser extension</a>. (And we have <a href='https://better.fyi/blockerList.txt'>a version of the Better blocking rules that you can use in UBlock Origin</a>.)</p>
+
+    <h3>🚮️ Find and use alternatives.</h3>
+
+    <p>Learn about and use alternatives. The following sites are invaluable for this:</p>
+
+    <ul>
+      <li><a href='https://goodreports.com/'>Good Reports</a></li>
+      <li><a href='https://switching.software/'>Switching Software</a></li>
+    </ul>
+
+    <h3>🚮️ Help spread the word!</h3>
+
+    <p>Link to this page using the <strong>#CleanUpTheWeb</strong> and <strong>#FlocOffGoogle</strong> hashtags.</p>
+
+    <h3>🚮️ Choose a different business model.</h2>
+
+    <p><strong class='emphasised'>Ultimately it comes down to this.</strong> If your own business model is based on tracking and profiling people, you’re part of the problem.</p>
+
+
+    <p>Silicon Valley tech bros will tell you that their way is the only way to build technology.</p>
+
+    <p>It’s not.</p>
+
+    <p>They’ll tell you that your “amazing journey” begins with a “startup” funded by angel investment and venture capital and ends when you’re either bought out by a Google or a Facebook or become one yourself. Unicorns and all that…</p>
+
+    <p>Bullshit!</p>
+
+    <p>You can create small, sustainable businesses. You can create cooperatives. You can create not-for-profits, <a href='https://small-tech.org'>like us.</a></p> And, within these alternative structures that aren’t obsessed with <a href='https://small-tech.org/videos/the-camera-panopticon/'>knowing everything about everyone</a> and <a href='https://2017.ind.ie/excuse-me/'>infinite growth with finite resources</a>, you can <strong>build tools that do what they say on the tin and nothing more.</strong></p>
+
+    <p>If you ask yourself what makes you happy, isn’t it that?</p>
+
+    <p>Do you want to become a billionaire? Do you want to track, profile, and manipulate people? Or do you just want to <a href='https://small-tech.org/videos/ux-talk/'>make beautiful things</a> that <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>improve people’s lives</a> and make the world a fairer and kinder place?
+
+    <p>We’re betting it’s the latter.</p>
+
+    <p>If you need inspiration, look at what (and how) the <a href='https://plausible.io/'>Plausible</a> folks are doing, for example, or the folks at <a href='https://hey.com'>HEY</a> and <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://www.pine64.org/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, or what we’re working on with <a href='https://sitejs.org'>Site.js</a> and the <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a>… you are not alone in saying no to Silicon Valley’s bullshit.</p>
+
+    <p>When they go big, let’s go <a href='https://small-tech.org/about/#small-technology'>small</a>.</p>
+
+    <p>Because <a href='https://small-tech.org/videos/'>small is beautiful.</a></p>
+
+    <h2>Like this? Fund us!</h2>
+
+    <p><a href="https://small-tech.org">Small Technology Foundation</a> is a tiny, independent not-for-profit.</p>
+
+    <p>We exist in part thanks to patronage by people like you. If you share <a href="https://small-tech.org/about#small-technology">our vision</a> and want to support our work, please <a href="https://small-tech.org/fund-us">become a patron or donate to us</a> today and help us continue to exist.</p>
+  </main>
+  <footer>
+    <p>Copyright <span class="copyright">©</span> 2021-present Small Technology Foundation. Ground Floor, 71 Lower Baggot Street, D02 P593, Dublin, Ireland. All content on this site is licensed under Creative Commons Attribution 4.0 International.</p>
+    <p><a href="https://small-tech.org/privacy">Our privacy policy</a> is “we exist to protect your privacy.”</p>
+    <p><a href="https://github.com/small-tech/cleanuptheweb.org">View source.</a></p>
+  </footer>
+</body>
+</html>
