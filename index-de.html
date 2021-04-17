@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='de'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='icon' href='data:,'> <!-- no favicon request -->
+  <link rel='stylesheet' href='index.css'>
+  <title>Räume das Internet auf!</title>
+</head>
+<body>
+  <main>
+    <h1>Räume das Internet auf!</h1>
+
+    <p id='introduction'><strong>Softwareentwickler:innen, es ist an der Zeit, eine Seite zu wählen:</strong> Wirst du mithelfen, das Internet von Tracking, welches unsere Privatsphäre gefährdet, zu befreien oder wirst du das Gegenteil tun?</p>
+
+    <h2>Was kannst du konkret tun?</h2>
+
+    <h3>🚮️ Entferne Drittanbieter-Scripte von Google, Facebook, usw.</h3>
+
+    <p>Dazu gehören <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (einer der am meisten verbreiteten Tracker der Welt), <a href='https://better.fyi/trackers/youtube.com/'>YouTube-Videos</a>, <a href='https://better.fyi/trackers/facebook.com/'>Facebook-Login Widgets</a>, usw.</p>
+
+    <p>Diese Skripte ermöglichen es Unternehmen wie Google und Facebook, Personen über das gesamte Internet zu verfolgen, während sie von Seite zu Seite navigieren. Wenn du diese Skripte in deine Internetseite einbettest, machst du dich also mitverantwortlich, da du Ihnen dieses Tracking ermöglichst.</p>
+
+    <p>Und ja, dazu gehört natürlich auch <a href='https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/'>fucking Google AMP</a>.</p>
+
+    <h3>🚮️ Sag zu Google "FLoC off"!</h3>
+
+    <p>Aufgrund des wachsenden Drucks hat Google angekündigt, das Tracking von Drittanbietern in seinem Chrome-Browser endlich zu blockieren. Klingt gut, oder? Und das ist es auch. Bis an den Punkt, dass die vorgeschlagene Alternative darin besteht, dass <strong>Chrome selbst die Leute auf jeder Internetseite, die sie besuchen, verfolgt… Es sei denn, die Internetseite bittet darum, dies nicht zu tun</strong>, indem sie den folgenden Header in die Antwort des Webservers aufnimmt:</p>
+
+    <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
+
+    <p>Falls wir noch einmal betonen müssen, wie bescheuert das ist…</p>
+
+    <p>Jede Webserver-Antwort auf der Welt sollte Google nicht anflehen müssen: "Bitte, Sir, verletze nicht die Privatsphäre der Person, die meine Seite besucht". Aber genau dazu zwingt uns Google mit seiner neuen "Initiative Federated Learning of Cohorts (FLoC)".</p>
+
+    <p>(Wenn du Schwierigkeiten hast, dir den Namen zu merken, denke einfach an "Herde" wie in "eine Herde Schafe", denn das ist offensichtlich das, was Google in uns sieht wenn sie denken, dass wir uns diesen Mist gefallen lassen.)</p>
+
+    <p><strong>Es liegt also an uns, den Entwickler:innen, diesen Header in jeden Webserver (z.B. nginx, Caddy, usw.), jedes Webtool (z.B. Wordpress, Wix, usw.)... ja, in alles, was heutzutage eine Webantwort liefert, einzubauen.</strong></p>
+
+    <p>Unser kleiner Webserver <a href='https://sitejs.org'>Site.js</a> ist bereits standardmäßig so eingestellt.</p>
+
+    <p>Es hat fünf Minuten gebraucht um das zu implementieren.</p>
+
+    <p>Du kannst das auch.</p>
+
+    <p>Weitere Einzelheiten über Google FLoC kannst du <a href='https://plausible.io/blog/google-floc'>hier</a> und <a href='https://cxl.com/blog/floc-dovekey/'>hier</a> nachlesen.</p>
+
+    <p><em>(Wenn politischen Entscheidungsträger:innen in diesem Jahrhundert aufmerksam genug und nicht zu sehr damit beschäftigt sind, sich die Hände zu reiben von der Aussicht, mit Google und Facebook zu verkehren und vielleicht sogar von ihnen angeheuert zu werden, dann sollten Sie das zur Kenntnis nehmen und - du weißt schon – zur Abwechslung mal Ihre verdammte Arbeit machen.)</em></p>
+
+    <h3>🚮️ Hör auf Google Chrome zu verwenden und bestärke andere es ebenso zu tun, wenn sie können.</h3>
+
+    <p><strong>Erinnere dich, wer hier der Bösewicht ist: Es ist Google</strong> (Alphabet, Inc.), nicht die Leute, die aus verschiedenen Gründen dazu gezwungen sind, den Webbrowser von Google zu verwenden (z. B. weil sie nicht wissen, wie man einen neuen Browser herunterlädt und installiert oder weil sie gezwungen sind, ihn für die Arbeit zu verwenden, usw.)</p>
+
+    <p><strong>Bitte achte darauf, dass du die Schuld nicht auf das Opfer schiebst, sondern lass deine Mitmenschen wissen, was das Problem mit Google ist ("they’re a factory farm for human beings"). Und rate ihnen, dass sie – <span class='emphasised'>wenn sie es können</span> – einen anderen Browser benutzen sollen.</strong></p>
+
+    <p>Leider ist nach derzeitigem Stand der Dinge kein Browser perfekt. Firefox zum Beispiel ist eine brauchbare Alternative. Aber behalte im Hinterkopf, dass <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla nur existiert, weil Google ihnen jedes Jahr etwa eine halbe Milliarde Dollar dafür zahlt, als Standardsuchmaschine</a> in deren Browser voreingestellt zu sein. Gleichwohl ist Safari eine gute Alternative auf Apples Plattformen. Aber bedenke auch hier, dass <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>Apple ebenfalls Milliarden dafür gezahlt bekommt, dass Google deine Privatsphäre verletzt</a> (im Gegensatz zu Mozilla braucht Apple das Geld nicht zum Überleben, aber es <em>will</em> es bestimmt trotzdem). Brave mag bis zu dem Punkt wie die perfekte Alternative erscheinen, dass das <a href='https://basicattentiontoken.org/'>Geschäftsmodell von Brave darin besteht, deine Aufmerksamkeit zu verkaufen</a>. Unter Linux ist <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> eine gute Option, aber vergiss nicht, dass <a href='https://wiki.gnome.org/AdvisoryBoard'>Google ebenfalls ein voll bezahltes Mitglied des GNOME-Beirats ist</a>…</p>
+
+    <p>Es ist entmutigend, die Tentakeln dieser Krake überall zu sehen und <strong>wenn es jemals eine passende Zeit gab, eine öffentlich finanzierte, unabhängige Organisation zu gründen, um einen Webbrowser ohne Bullshit zu bauen, dann ist sie jetzt.</strong></p>
+
+    <h3>🚮️ Schütze dich selbst und zeige anderen, wie sie das ebenfalls tun können.</h3>
+
+    <p>Obwohl Ad- und Tracking-Blocker ein verlorenes Katz- und Mausspiel sind (siehe z. B. FLoC weiter oben), sind sie auch heute noch nützlich, um die Privatsphäre von Menschen zu schützen. Wir entwickeln einen davon namens <a href='https://better.fyi'>Better Blocker</a> als <a href='https://small-tech.org'>Small Technology Foundation</a>. Eine andere Erweiterung, welche wir empfehlen können, ist die ausgezeichnete <a href='https://ublockorigin.com/'>uBlock Origin Browser-Erweiterung</a>. (Und wir haben <a href='https://better.fyi/blockerList.txt'>eine Version der Better-Blocking-Regeln, die du in uBlock Origin verwenden kannst</a>.)</p>
+
+    <h3>🚮️ Suche und verwende Alternativen.</h3>
+
+    <p>Lerne Alternativen kennen und nutze diese. Die folgenden Seiten (leider nur auf Englisch) sind dafür von unschätzbarem Wert:</p>
+
+    <ul>
+      <li><a href='https://goodreports.com/'>Good Reports</a></li>
+      <li><a href='https://switching.software/'>Switching Software</a></li>
+    </ul>
+
+    <h3>🚮️ Erzähl anderen davon!</h3>
+
+    <p>Verlinke auf diese Internetseite mit den Hashtags <strong>#CleanUpTheWeb</strong> und <strong>#FlocOffGoogle</strong>.</p>
+
+    <h3>🚮️ Wähle ein alternatives Geschäftsmodell.</h2>
+
+    <p><strong class='emphasised'>Letztlich läuft es auf Folgendes hinaus:</strong> Wenn dein eigenes Geschäftsmodell auf dem Verfolgen und Profilieren von Menschen basiert, bist du Teil des Problems.</p>
+
+
+    <p>Die Brüder und Schwestern aus dem Silicon Valley werden dir sagen, dass ihr Weg der einzige Weg ist, um Technologie zu entwickeln.</p>
+
+    <p>Das stimmt nicht.</p>
+
+Sie werden dir sagen, dass deine "wundervolle Reise" mit einem "Startup" beginnt, das durch Investitionen von Business-Angels und Risikokapital finanziert wird. Und damit endet, wenn es entweder von Google oder Facebook aufgekauft wird oder selbst eines von beiden wird. Einhörner und so weiter…
+
+    <p>Sie werden dir sagen, dass deine "wundervolle Reise" mit einem "Startup" beginnt, das durch Investitionen von Business-Angels und Risikokapital finanziert wird. Und damit endet, wenn es entweder von Google oder Facebook aufgekauft wird oder selbst eines von beiden wird. Einhörner und so weiter…</p>
+
+    <p>Das ist Schwachsinn!</p>
+
+Sie können kleine, nachhaltige Unternehmen schaffen. Sie können Genossenschaften gründen. Man kann Non-Profit-Organisationen gründen, <a href='https://small-tech.org'>wie uns.</a></p> Und innerhalb dieser alternativen Strukturen, die nicht davon besessen sind, <a href='https://small-tech.org/videos/the-camera-panopticon/'>alles über jeden zu wissen</a> und <a href='https://2017.ind.ie/excuse-me/'>unendliches Wachstum mit endlichen Ressourcen</a>, kann man <strong>Werkzeuge bauen, die das tun, was auf der Verpackung steht und nichts weiter.</strong>
+
+    <p>Du kannst kleine, nachhaltige Unternehmen schaffen. Du kannst Genossenschaften gründen. Du kannst Non-Profit-Organisationen gründen, <a href='https://small-tech.org'>wie unsere.</a></p> Und innerhalb dieser alternativen Strukturen, die nicht davon besessen sind <a href='https://small-tech.org/videos/the-camera-panopticon/'>alles über jeden zu wissen</a> und <a href='https://2017.ind.ie/excuse-me/'>unendliches Wachstum mit endlichen Ressourcen anzustreben</a>, kannst du <strong>Werkzeuge bauen die das tun, was auf der Verpackung steht und nichts sonst.</strong></p>
+
+    <p>Wenn du dich fragst was dich glücklich macht – ist es dann nicht genau das?</p>
+
+Wollen Sie ein Milliardär werden? Wollen Sie Menschen verfolgen, profilieren und manipulieren? Oder wollen Sie einfach nur schöne Dinge machen, die das Leben der Menschen verbessern und die Welt zu einem gerechteren und freundlicheren Ort machen?
+
+    <p>Willst du Milliardär:in werden? Und möchtest du dafür Menschen verfolgen, profilieren und manipulieren? Do you want to track, profile, and manipulate people? Oder möchtest du einfach nur <a href='https://small-tech.org/videos/ux-talk/'>schöne und nützliche Dinge erschaffen</a> die <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>das Leben der Menschen verbessern</a> und die Welt zu einem gerechteren und freundlicheren Ort machen?
+
+    <p>Wir wette, es ist Letzteres.</p>
+
+Wenn Sie Inspiration brauchen, schauen Sie sich an, was (und wie) die <a href='https://plausible.io/'>Plausible</a> Leute machen, oder die Leute bei <a href='https://hey.com'>HEY</a> und <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www. pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, oder woran wir mit <a href='https://sitejs.org'>Site.js</a> und dem <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a> arbeiten... Sie sind nicht allein, wenn Sie Nein zu Silicon Valley's Bullshit sagen.
+
+    <p>Wenn du eine Inspiration suchst, schau dir beispielsweise an, was (und wie es) die Leute von <a href='https://plausible.io/'>Plausible</a> tun. Oder die Menschen von <a href='https://hey.com'>HEY</a> und <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, oder woran wir mit <a href='https://sitejs.org'>Site.js</a> und dem <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a> arbeiten… Du bist nicht allein, wenn du <strong>Nein</strong> zu Silicon Valleys Schwachsinn sagst.</p>
+
+    <p>Wenn sie groß werden, sollten wir <a href='https://small-tech.org/about/#small-technology'>klein</a> werden.</p>
+
+    <p>Denn <a href='https://small-tech.org/videos/'>klein ist fein.</a></p>
+
+    <h2>Das gefällt dir? Dann unterstütze uns!</h2>
+
+    <p><a href="https://small-tech.org">Small Technology Foundation</a> ist ein kleines, unabhängiges "Not-for-profit"-Unternehmen.</p>
+
+Wir existieren zum Teil dank des Mäzenatentums von Menschen wie Ihnen. Wenn Sie <a href="https://small-tech.org/about#small-technology">unsere Vision</a> teilen und unsere Arbeit unterstützen wollen, werden Sie <a href="https://small-tech.org/fund-us">Gönner oder spenden Sie</a> und helfen Sie uns, weiter zu existieren.
+
+    <p>Wir existieren zum Teil dank der Unterstützung von Menschen wie dir. Wenn du <a href="https://small-tech.org/about#small-technology">unsere Vision</a> teilst und unsere Arbeit unterstützen möchtest, <a href="https://small-tech.org/fund-us">werde ein Patron oder spende noch heute an uns</a> und hilf uns dabei, unsere Existenz zu sichern.</p>
+  </main>
+  <footer>
+    <p>Copyright <span class="copyright">©</span> 2021-present Small Technology Foundation. Ground Floor, 71 Lower Baggot Street, D02 P593, Dublin, Ireland. Der gesamte Inhalt dieser Seite steht unter der Creative Commons Attribution 4.0 International Lizenz.<br />German translation by <a href="https://www.sweetgood.de" target="_blank">SWEETGOOD</a> & <a href="https://www.deepl.com/translator" target="_blank">deepL</a> – <a href="https://github.com/SWEETGOOD-DE/cleanuptheweb.org" target="_blank">Source</a></p>
+    <p><a href="https://small-tech.org/privacy">Datenschutzerklärung</a>: "Wir existieren, um deine Privatsphäre zu schützen."</p>
+    <p><a href="https://github.com/small-tech/cleanuptheweb.org">Quellcode ansehen</a></p>
+  </footer>
+</body>
+</html>
