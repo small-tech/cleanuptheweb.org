@@ -12,7 +12,26 @@ body {
   padding-bottom: 1em;
 }
 
-main {
+nav * {
+  display: inline-block;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li:after {
+  content: ' | ';
+  font-weight: 800;
+}
+
+nav li:last-of-type:after {
+  content: '';
+}
+
+main, nav {
   padding-bottom: 1em;
   border-bottom: 2px solid orangered;
 }
