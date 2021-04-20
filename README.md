@@ -1,5 +1,4 @@
-# CleanUpTheWeb.org web site
-
+# CleanUpTheWeb.org
 This is the source code for the <a href='https://cleanuptheweb.org'>CleanUpTheWeb.org</a> web site.
 
 ## Like this? Fund us!
