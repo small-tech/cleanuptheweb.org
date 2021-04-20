@@ -24,33 +24,33 @@
       </ul>
     </nav>
 
-    <p id='introduction'><strong>Ontwikkelaars, het is tijd om een kant te kiezen:</strong> help je mee, om het internet, van privacyschending te ontdoen of er juist medeplichtig aan te zijn?</p>
+    <p id='introduction'><strong>Ontwikkelaars, het is tijd om een kant te kiezen:</strong> help je mee om het internet van privacyschending te ontdoen of er juist medeplichtig aan te zijn?</p>
 
     <h2>Wat kan ik doen?</h2>
 
     <h3>🚮️ Verwijder scripts van Google, Facebook, etc.</h3>
 
-    <p>Dit houdt in <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (een van de meest aanwezige trackers in de wereld), <a href='https://better.fyi/trackers/youtube.com/'>YouTube videos</a>, <a href='https://better.fyi/trackers/facebook.com/'>Facebook inlog widgets</a>, etc.</p>
+    <p>Dit houdt ondere andere in <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (een van de meest aanwezige trackers in de wereld), <a href='https://better.fyi/trackers/youtube.com/'>YouTube videos</a>, <a href='https://better.fyi/trackers/facebook.com/'>Facebook inlog widgets</a>, en anderen.</p>
 
-    <p>Deze scripts maken het voor 'mensen verzamelaars' zoals Google en Facebook mogelijk om mensen online te volgen terwijl ze van site naar site gaan. Wanneer je deze widgets gebruikt draag je bij aan het volgen van mensen.</p>
+    <p>Deze scripts maken het voor 'mensen verzamelaars' zoals Google en Facebook mogelijk om mensen online te volgen terwijl ze van site naar site navigeren. Wanneer je deze widgets gebruikt draag je bij aan het volgen van mensen.</p>
 
     <p>En ja, hier hoort <a href='https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/'>fucking Google AMP</a> absoluut bij.</p>
 
     <h3>🚮️ Zeg tegen Google: "FLoC off"!</h3>
 
-    <p>Onder aanhoudende druk, maakte Google bekend dat ze uiteindelijk third-party tracking zal blokkeren in de Chrome browser. Klink goed, toch? Dat is zo, totdat je hoort wat hun alternatief is: <strong>Om Chrome zelf gebruikers te volgen op elke website die ze bezoeken, tenzij de website ze vraagt om dit niet te doen</strong> door onderstaande header in het antwoord van de webserver toe te voegen:</p>
+    <p>Onder aanhoudende druk maakte Google bekend dat ze uiteindelijk third-party tracking zal blokkeren in de Chrome browser. Klink goed, toch? Dat is zo, totdat je hoort wat hun alternatief is: <strong>Om Chrome zelf de gebruikers te laten volgen op elke website die ze bezoeken, tenzij de website ze vraagt om dit niet te doen</strong> door onderstaande header in het antwoord van de webserver toe te voegen:</p>
 
     <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
 
-    <p>Nu, in het geval dat we moeten uitleggen hoe tegendraads dit is…</p>
+    <p>In het geval dat we moeten uitleggen hoe tegendraads dit is…</p>
 
-    <p>Elk websever-antwoord in de wereld zou niet aan Google hoeven te smeken, "alstublieft, meneer, overtreed niet de privacy van de persoon die deze website bezoekt" maar dat is precies wat Google ons dwingt te doen met hun nieuwe "Federated Learning of Cohors (FLoc)" initiatief.</p>
+    <p>Elk webserver-antwoord in de wereld zou niet aan Google te hoeven smeken, "alstublieft, meneer, overtreed niet de privacy van de persoon die deze website bezoekt" maar dat is precies waartoe Google ons dwingt met hun nieuwe "Federated Learning of Cohors (FLoc)" initiatief.</p>
 
-    <p>(Als je moeite hebt met het herinneren van de naam, denk dan aan "flock" (kudde) zoals in "a flock of sheep" (een kudde schapen), want dat is precies zoals Google ons ziet als ze denken dat wij het hierbij laten zitten.)</p>
+    <p>(Als je moeite hebt met het herinneren van de naam, denk dan aan "flock" (kudde) zoals in "a flock of sheep" (een kudde schapen), want dat is precies hoe Google ons ziet als ze denken dat wij het hierbij laten zitten.)</p>
 
-    <p><strong>Dus het is aan ons, ontwikkelaars, om deze header in elke webserver (e.g., nginx, Caddy, etc.), elke webtool (e.g., Wordpress, Wix, etc)… ja, in alles dat dan ook maar een web antwoord teruggeeft op deze planeet vandaag.</strong></p>
+    <p><strong>Dus het is aan ons, ontwikkelaars, om deze header in elke webserver (e.g., nginx, Caddy, etc.), elke webtool (e.g., Wordpress, Wix, etc) toe te voegen. Ja, in alles wat dan ook maar een webserver-antwoord teruggeeft op deze planeet vandaag de dag.</strong></p>
 
-    <p>Onze kleine webserver, <a href='https://sitejs.org'>Site.js</a>, heeft dit standaard aanstaan.</p>
+    <p>Onze kleine webserver, <a href='https://sitejs.org'>Site.js</a>, heeft dit standaard ingeschakeld.</p>
 
     <p>Het kostte slechts vijf minuten om te implementeren.</p>
 
@@ -58,7 +58,7 @@
 
     <p>Lees meer over Google FLoC <a href='https://plausible.io/blog/google-floc'>hier</a> en <a href='https://cxl.com/blog/floc-dovekey/'>hier.</a></p>
 
-    <p><em>(Als er beleidsmakers wakker zijn deze eeuw en het niet te druk hebben met het in hun handen wrijven en kwijlen bij de gedachte aan zich mengen en mogelijk ooit aangenomen worden door Google en Facebook, misschien wil je dan even aantekeningen maken en, misschien, je verdomde baan eens doen voor de verandering?)</em></p>
+    <p><em>(Als er beleidsmakers wakker zijn deze eeuw, en het niet te druk hebben met het in hun handen wrijven en kwijlen bij de gedachte aan zich mengen met en mogelijk ooit aangenomen worden door Google en Facebook, misschien wil je dan even aantekeningen maken en, misschien, je verdomde baan eens doen voor de verandering?)</em></p>
 
     <h3>🚮️ Stop met het gebruiken van Chrome en haal anderen ook over om dit te doen - als ze kunnen.</h3>
 
@@ -66,9 +66,9 @@
 
     <p><strong>Dus, wees voorzichtig zodat je niet eindigt met het de schuld geven van het slachtoffer maar laat mensen weten wat het probleem met Google is ("ze zijn een boerderij voor mensen") en adviseer ze dat, <span class='emphasis'>als ze kunnen</span>, ze een andere browser moeten gebruiken.</strong></p>
 
-    <p>Helaas, gezien de stand van zaken, geen enkele browser is perfect. Firefox, bijvoorbeeld, is een goed alternatief maar onthou <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla bestaat alleen omdat Google betaalt ze ongeveer een half miljard dollar elk jaar om de standaard zoekmachine te zijn </a> in hun browser. Evenzo, Safari is a goed alternatief op Apple’s platforms maar vergeet niet <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>Apple krijgt ook miljarden betaald om Google jouw privacy te schenden</a> (in tegenstelling tot Mozilla, Apple heeft het geld niet nodig om te overleven, maar het <em>wil</em> het zeker). Brave ziet er misschien uit als het perfecte alternatief totdat je je realiseert dat <a href='https://basicattentiontoken.org/'>Brave’s zakelijk model is om je aandacht te verkopen</a>. Op Linux, <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> is een goede optie maar vergeet niet dat <a href='https://wiki.gnome.org/AdvisoryBoard'>Google een volledig betaald lid is van het GNOME Advisary Board</a>…</p>
+    <p>Helaas, gezien de stand van zaken, is geen enkele browser perfect. Firefox, bijvoorbeeld, is een goed alternatief maar onthoud dat <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla alleen bestaat omdat Google ze ongeveer een half miljard dollar betaalt, elk jaar om de standaard zoekmachine te zijn</a> in hun browser. Evenzo, Safari is een goed alternatief op Apple’s platformen, maar vergeet niet dat <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>Apple ook miljarden betaald krijgt om via Google jouw privacy te schenden</a> (in tegenstelling tot Mozilla heeft Apple het geld niet nodig om te overleven, maar het <em>wil</em> het zeker). Brave ziet er misschien uit als het perfecte alternatief totdat je je realiseert dat <a href='https://basicattentiontoken.org/'>Brave’s zakelijk model is om je aandacht te verkopen</a>. Op Linux, is <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> een goede optie maar vergeet niet dat <a href='https://wiki.gnome.org/AdvisoryBoard'>Google een volledig betaald lid is van het GNOME Advisary Board</a>…</p>
 
-    <p>Het is ontmoedigend om te zien dat de tentakels van deze kraken overal zitten en <strong>als er ooit een moment was om een publiek-gefinancieerde onafhankelijke organisatie was om een no-bullshit webbrowser te maken, dan is dat nu.</strong></p>
+    <p>Het is ontmoedigend om te zien dat de tentakels van deze kraken overal zitten en <strong>als er ooit een moment voor een publiek-gefinancieerde onafhankelijke organisatie was om een no-bullshit webbrowser te maken, dan is dat nu.</strong></p>
 
     <h3>🚮️ Bescherm jezelf en laat anderen zien hoe ze hetzelfde kunnen doen.</h3>
 
@@ -107,7 +107,7 @@
 
     <p>Wij gokken op het laatste.</p>
 
-    <p>Als je inspiratie nodig hebt, kijk dan bijvoorbeeld naar wat (en hoe) de mensen van <a href='https://plausible.io/'>Plausible</a> (het) doen, of de mensen van <a href='https://hey.com'>HEY</a> en <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, of waar wij aan werken met <a href='https://sitejs.org'>Site.js</a> en de <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a>… je bent niet alleen in het nee zeggen tegen Silicon Valley's onzin.</p>
+    <p>Als je inspiratie nodig hebt, kijk dan bijvoorbeeld naar wat (en hoe) de mensen van <a href='https://plausible.io/'>Plausible</a> (het) doen, of de mensen van <a href='https://hey.com'>HEY</a> en <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, of waar wij aan werken met <a href='https://sitejs.org'>Site.js</a> en het <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a>… je bent niet alleen in het nee zeggen tegen Silicon Valley's onzin.</p>
 
     <p>Als zij groot gaan, laten wij <a href='https://small-tech.org/about/#small-technology'>klein</a> worden.</p>
 
@@ -117,7 +117,7 @@
 
     <p><a href="https://small-tech.org">Small Technology Foundation</a> is een kleine, onafhankelijke "niet-voor-winst"-onderneming.</p>
 
-    <p>Wij bestaan deels door de steun van mensen zoals jij. Als je <a href="https://small-tech.org/about#small-technology">onze visie</a> deelt en ons werk wil steunen, please <a href="https://small-tech.org/fund-us">wordt een patron of doneer</a> vandaag en help ons om te blijven bestaan.</p>
+    <p>Wij bestaan deels door de steun van mensen zoals jij. Als je <a href="https://small-tech.org/about#small-technology">onze visie</a> deelt en ons werk wil steunen, alsjeblieft <a href="https://small-tech.org/fund-us">word een patron of doneer</a> vandaag en help ons om te blijven bestaan.</p>
   </main>
   <footer>
     <p>Copyright <span class="copyright">©</span> 2021-present Small Technology Foundation. Ground Floor, 71 Lower Baggot Street, D02 P593, Dublin, Ireland. All content on this site is licensed under Creative Commons Attribution 4.0 International.</p>
