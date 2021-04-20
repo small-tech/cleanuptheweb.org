@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,"> <!-- no favicon request -->
+  <link rel="stylesheet" href="../index.css">
+  <title>Rydd opp på webben!</title>
+</head>
+<body class="vsc-initialized">
+  <main>
+    <h1>Rydd opp på webben!</h1>
+
+    <nav>
+      <p><strong>Språk:</strong></p>
+      <ul>
+        <li><a href="/" hreflang="en">English</a></li>
+        <li><a href="/de/" hreflang="de">Deutsch</a></li>
+        <li><a href="/fr/" hreflang="fr">Français</a></li>
+        <li><a href="/es/" hreflang="es">Español</a></li>
+        <li><a href="/nl/" hreflang="nl">Nederlands</a></li>
+        <li aria-current="page">Norsk</li>
+      </ul>
+    </nav>
+
+    <p id="introduction"><strong>Utviklere, tiden har kommet for å velge en side:</strong> vil du hjelpe til å fjerne sporing, eller vil du være medskyldig i snokinga?</p>
+
+    <h2>Hva kan jeg gjøre?</h2>
+
+    <h3>🚮️ Fjern tredjeparts javascript fra Google, Facebook, og lignende.</h3>
+
+    <p>Dette inkluderer <a href="https://better.fyi/trackers/google-analytics.com/">Google Analytics</a> (en av verdens aller største snokere), <a href="https://better.fyi/trackers/youtube.com/">YouTube videoer</a>, <a href="https://better.fyi/trackers/facebook.com/">Facebook login elementer</a>, osv.</p>
+
+    <p>Disse scriptene lar store selskap som Google og Facebook spore folk på tvers av sider på webben. Hvis du tillater dem på sida di medvirker du aktivt til denne snokinga i folks privatliv.</p>
+
+    <p>Og ja, det inkluderer i aller høyeste grad <a href="https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/">jævla Google AMP</a>.</p>
+
+    <h3>🚮️ Be Google om å "FLoC off"!</h3>
+
+    <p>Etter mye press har Google endelig gått med på å avslutte tredjeparts -sporing i Chrome browseren. Det er vel bra? Ja, isolert er det er en god ting, men alternativet deres er nå å <strong>la Chrome spore folk på alle sider de besøker om ikke siden aktivt ber dem om å la være</strong> ved å inkludere denne headeren i svaret sitt</p>
+
+    <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
+
+    <p>Om det engang er nødvendig å forklare hvor hodestups sinnsvakt det er…</p>
+
+    <p>Alle webutviklere bør ikke trenge å be Google: “snille Google, værsåsnill ikke krenk gjestene mines privatliv”, men det er akkurat det Google prøver å tvinge oss til å gjøre med dette nye "Federated Learning of Cohorts (FLoC)"" initiativet.</p>
+
+    <p>(om du synes navnet er vanskelig å huske, tenk “flokk” som i “en saueflokk”, for det må være det Google mener vi er om de tror vi vil akseptere sånn dritt som dette.)</p>
+
+    <p><strong>Så, nå er det opp til oss utviklere å få dette svaret inn i alle webtjenere (f.eks. nginx, Caddy, osv.), alle webverktøy (f.eks. Wordpress, Wix, osv.)… faen heller, inn i alle ting som kan sende tilbake et websvar på denne eller andre planeter.</strong></p>
+
+    <p>Vår lille webtjener, <a href="https://sitejs.org/">Site.js</a>, gjør det allerede.</p>
+
+    <p>Det tok oss fem minutter.</p>
+
+    <p>Dette klarer du.</p>
+
+    <p>Les mer om Google FLoC <a href="https://plausible.io/blog/google-floc">her</a> og <a href="https://cxl.com/blog/floc-dovekey/">her.</a></p>
+
+    <p><em>(Om noen beslutningstakere er våkne der ute og ikke for opptatte med å gni seg i henda og sikle etter å godsnakke med og til slutt kanskje til og med bli ansatte av Google eller Facebook, så kanskje dere kan følge med og, lissom, gjøre den jobben dere faenmeg er satt til for en gangs skyld.)</em></p>
+
+    <h3>🚮️ Ikke bruk Chrome og anbefal andre om å la være, om de kan.</h3>
+
+    <p><strong>Husk hvem som er skurken her: Google</strong> (Alphabet, Inc.), ikke folk som kanskje er tvunget til å bruke Googles nettleser av en eller annen grunn (f.eks. vet de ikke selv hvordan man laster ned og installerer en annen nettleser, eller de må bruke den på jobben, osv.)</p>
+
+    <p><strong>Så, værsåsnill trø varsomt og ikke angrip offeret, men la folk få vite at hva som er problematisk med Google (“de er en fabrikkgård for mennesker”), og at <span class='emphasised'>om de kan</span>, bør de bruke en annen nettleser.</strong></p>
+
+    <p>Desverre finnes det i dag ingen perfekt nettleser. Firefox, for eksempel, er et godt alternativ men husk at <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla kun eksisterer fordi Google betaler dem rundt en halv milliard dollar i året for å være førstevalg som søkemotor</a> i nettleseren. På Apples platform er Safari et godt alternativ, men husk at <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>Apple også får milliarder fra Google for å la dem krenke privatlivet ditt</a> (til forskjell fra Mozilla, trenger ikke Apple pengene for å overleve, men de <em>har lyst</em> på dem). Brave virker kanskje som det perfekte alternativet til du innser at <a href='https://basicattentiontoken.org/'>Brave lever av å selge oppmerksomheten din</a>. På Linux er <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> et godt valg, men ikke glem at <a href='https://wiki.gnome.org/AdvisoryBoard'>Google er et fullverdig, betalende medlem av GNOME Advisory Board</a>…</p>
+
+    <p>Det er nedslående å se hvordan denne jævla krakenen har snodd tentaklene sine inn overalt og  <strong>om det noengang var en tid for å lage en offentlig finansiert uavhengig organisasjon for å lage en tullsnakkfri nettleser, så er det nå.</strong></p>
+
+    <h3>🚮️ Beskytt deg selv og vis andre hvordan de kan beskytte seg.</h3>
+
+    <p>Sporingsblokkering er en kamp vi kan komme til å tape (f.eks. se FLoC, over), men det er fortsatt et nyttig verktøy for å beskytte folks privatliv. Vi lager en vi kaller <a href='https://better.fyi'>Better Blocker</a> her i <a href='https://small-tech.org'>Small Technology Foundation</a>. En annen blokkerer vi anbefaler varmt er den fremragende <a href='https://ublockorigin.com/'>uBlock Origin nettleserutvidelsen</a>. (Og vi har <a href='https://better.fyi/blockerList.txt'>en versjon av Better blokkeringsregler som du kan bruke med UBlock Origin</a>.)</p>
+
+    <h3>🚮️ Finn og bruk alternativer.</h3>
+
+    <p>Lær om og bruk alternativer. Disse nettsidene er uvurderlige for dette:</p>
+
+    <ul>
+      <li><a href='https://goodreports.com/'>Good Reports</a></li>
+      <li><a href='https://switching.software/'>Switching Software</a></li>
+    </ul>
+
+    <h3>🚮️ Hjelp å spre budskapet!</h3>
+
+    <p>Lenk til denne siden med emneknaggene <strong>#CleanUpTheWeb</strong> og <strong>#FlocOffGoogle</strong>.</p>
+
+    <h3>🚮️ Velg en annen forretningsmodell.</h2>
+
+    <p><strong class='emphasised'>Dette er det viktigste.</strong> Om forretningsmodellen din krever sporing og profilering av folk så er du en del av problemet..</p>
+
+    <p>Silicon Valley tech bros vil prøve å fortelle deg at dette er den eneste måten å bygge teknologi på.</p>
+
+    <p>De tar feil.</p>
+
+    <p>De vil fortelle deg at den “utrolige reisen“ din starter med en “startup“ som finansieres av engelinvestorer og risikovillige investeringsfirmaer og slutter når du blir kjøpt ut av noen som Google eller Facebook, eller blir sånn en selv. Enhjørninger og alt det der.…</p>
+
+    <p>Pisspreik!</p>
+
+    <p>Du kan lage små, bærekraftige firmaer. Du kan lage kooperativer. Du kan lage ideelle organisasjoner, <a href='https://small-tech.org'>som oss.</a></p>
+
+    <p>Og med slike alternative strukturer som ikke er besatt av å <a href='https://small-tech.org/videos/the-camera-panopticon/'>vite alt om alle</a> og <a href='https://2017.ind.ie/excuse-me/'>uendelig vekst med begrensede ressurser</a>, kan du <strong>bygge verktøy som gjør det de sier og ingenting annet.</strong></p>
+
+    <p>Om du spør deg selv hva som gir deg lykke, er det ikke nettopp det?</p>
+
+    <p>Har du lyst til å bli milliardær? Har du lyst til å spore, profilere og manipulere folk? Eller har du bare lyst til å <a href='https://small-tech.org/videos/ux-talk/'>lage vakre ting</a> som <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>forbedrer folks liv</a> og gjør verden til et mer rettferdig og snillere sted?</p>
+
+    <p>Vi vedder på at det siste frister mer.</p>
+
+    <p>Om du trenger inspirasjon, ta en titt på hva (og hvordan) <a href='https://plausible.io/'>Plausible</a> gjengen gjør, for eksempel, eller folka som lager <a href='https://hey.com'>HEY</a> og <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, eller det vi jobber med i <a href='https://sitejs.org'>Site.js</a> og <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a>… Du er ikke alene i å takke nei til Silicon Valley sitt pisspreik.</p>
+
+    <p>Når de sikter stort, la oss tenke <a href='https://small-tech.org/about/#small-technology'>smått</a>.</p>
+
+    <p>Fordi <a href='https://small-tech.org/videos/'>smått er godt.</a></p>
+
+    <h2>Liker du dette? Gi oss penger!</h2>
+
+    <p><a href="https://small-tech.org">Small Technology Foundation</a> er en knøttliten, uavhengig ideell organisasjon.</p>
+
+    <p>Vi finnes fordi folk som deg støtter oss. Om du deler <a href="https://small-tech.org/about#small-technology">vår visjon</a> og ønsker å støtte jobben vi gjør, vår så snill å <a href="https://small-tech.org/fund-us">bli en støttespiller eller donér</a> i dag så vi kan fortsette å eksistere.</p>
+  </main>
+  <footer>
+    <p>Opphavsrett <span class="copyright">©</span> 2021-nå tilhører Small Technology Foundation. Ground Floor, 71 Lower Baggot Street, D02 P593, Dublin, Ireland. Alt innhold på denne sida er tilgjengelig under Creative Commons Attribution 4.0 International.</p>
+    <p><a href="https://small-tech.org/privacy">Våre personvernsregler</a> er “vi finnes for å beskytte ditt privatliv.”</p>
+    <p><a href="https://github.com/small-tech/cleanuptheweb.org">Les kildekoden.</a></p>
+  </footer>
+</body>
+</html>
