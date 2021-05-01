@@ -1,0 +1,55 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "how to translate",
+  "steps": [
+    {
+      "title": "introduction",
+      "description": "# clean up the web!\r\n\r\nthis is a static site encouraging developers to take an active stance against tracking with google's floc initiative\r\n\r\nthis code-tour will take you through the steps to create your own translation"
+    },
+    {
+      "file": "index.html",
+      "description": "## copy this file\r\nthis is the main html file that you should base your translation on. please keep the tone and content, and use idiomatic expressions from your own language. i encourage some light profanity!\r\n\r\n*copy this file into a folder denoted by your language.*\r\n\r\nyou can find a [list language codes on wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).\r\n\r\nif you were creating a translation into finnish you would now copy this file into a new folder called `/fi`",
+      "line": 1
+    },
+    {
+      "file": "index.html",
+      "description": "## set the language\r\nyou will have to change the language tag here for your translated file. so, if you're translating to (for example) finnish this should say \r\n\r\n```html\r\n<html lang=\"fi\">\r\n```",
+      "line": 2
+    },
+    {
+      "file": "index.html",
+      "description": "## link back to english\r\n\r\nchange this line to link back to the original, english version\r\n\r\nit should be \r\n\r\n```html\r\n<li><a href='/' hreflang='en'>English</a></li>\r\n```",
+      "line": 18
+    },
+    {
+      "file": "index.html",
+      "description": "## add your language to the list\r\n\r\nadd your own language as the last item in the list of translations. keeping with the finnish-example the new line here (including the `</ul>` you are pushing down a line) should be\r\n\r\n```html\r\n    <li aria-current='page'>Suomalainen</li>\r\n</ul>\r\n```",
+      "line": 24
+    },
+    {
+      "file": "index.html",
+      "description": "## translate\r\n\r\nhere starts the job of translating the text. have fun with it, and make it engaging! but, keep the content (you're not writing your own piece, you're translating what is already here)",
+      "line": 27
+    },
+    {
+      "file": "index.html",
+      "description": "## translate the title\r\n\r\nremember to translate the title-tag to your language (this is the text that's shown on the tab in your browser)",
+      "line": 9
+    },
+    {
+      "file": "index.html",
+      "description": "## and the heading\r\n\r\n.. and the heading for the entire page (this is the text on top of the page)",
+      "line": 13
+    },
+    {
+      "file": "index.html",
+      "description": "## make the other languages link to you\r\n\r\nnow go *back to the original `index.html` in the root* and add a link to your translation to the end of the list of languages. it should look like this\r\n\r\n```html\r\n    <li><a href='/fi' hreflang='fi'>Suomalainen</a></li>\r\n</ul>\r\n```\r\n\r\nand then do that for all the other `index.html` files that you find under the other languages, so they all link to your translation. you should keep adding it to the end, or if you want to add it at some other position at least keep it consistent through all the files.",
+      "line": 24
+    },
+    {
+      "title": "summary",
+      "description": "# that's it!\r\n\r\nnow all you have to do is to push your changes and open a pull-request, and your translation will soon be live on [clean up the web](https://cleanuptheweb.org)!"
+    }
+  ],
+  "ref": "main"
+}
