@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='it'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='icon' href='data:,'> <!-- no favicon request -->
+  <link rel='stylesheet' href='index.css'>
+  <title>Ripuliamo il web!</title>
+</head>
+<body>
+  <main>
+    <h1>Ripuliamo il web!</h1>
+
+    <nav>
+      <p><strong>Lingua:</strong></p>
+      <ul>
+        <li><a href='/' hreflang='en'>English</a></li>
+        <li><a href='/de/' hreflang='de'>Deutsch</a></li>
+        <li><a href='/fr/' hreflang='fr'>Français</a></li>
+        <li aria-current='page'>Italiano</li>
+        <li><a href='/es/' hreflang='es'>Español</a></li>
+        <li><a href='/nl/' hreflang='nl'>Nederlands</a></li>
+        <li><a href='/no/' hreflang='no'>Norsk</a></li>
+      </ul>
+    </nav>
+
+    <p id='introduction'><strong>Programmatori, è ora di scegliere da che parte stare:</strong> volete aiutare ad eliminare il tracciamento che invade la nostra privacy o volete esserne complici?</p>
+
+    <h2>Che cosa posso fare?</h2>
+
+    <h3>🚮️ Rimuuovete gli script di terze parti quali Google, Facebook, ecc.</h3>
+
+    <p>Questi includono anche <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (uno tra i più usati al mondo), <a href='https://better.fyi/trackers/youtube.com/'>video di YouTube</a>, <a href='https://better.fyi/trackers/facebook.com/'>i widgets per il login tramite Facebook</a>, ecc.</p>
+
+    <p>Questi script permettono ai "collezionisti di persone", come Google e Facebook, il tracciamento degli utenti attraverso il web, mentre si spostano da sito a sito. Se li incorporate nel vostro sito, siete dei complici in questa attività di tracciamento.</p>
+
+    <p>E si, tutto questo include definitivamente anche <a href='https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/'>il fottuto Google AMP</a>.</p>
+
+    <h3>🚮️ Dite "FLoC off" a Google!</h3>
+
+    <p>A causa della pressione montante, Google ha annunciato che bloccherà tutti i tracker di terze parti nel suo browser Chrome. Bene, vero? Si, fino a che non sapete che l'alternativa è <strong>avere Chrome stesso che si occupa del tracciamento delle persone attraverso ogni sito che visitano... a meno che il sito stesso non chieda di esserne escluso</strong> includendo questo header nella risposta:</p>
+
+    <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
+
+    <p>Ora, nel caso dovessimo spiegare quanto tutto questo vada all'incontrario…</p>
+
+    <p>Ogni risposta da un sito web non dovrebbe supplicare Google, “la prego signore, non violi la privacy della persona che sta visitando il mio sito” ma questo è esattamente quello che Google sta cercando di forzarci a fare con la sua nuova iniziativa Federated Learning of Cohorts (FLoC).</p>
+
+    <p>(se fate fatica a ricordare il termine pensate a “flock” (gregge ndt.) come in “a flock of sheep” (gregge di pecore ndt.), perché è chiaramente così che ci vede Google, visto che pensa che sopporteremo questa merda.)</p>
+
+    <p><strong>Sta quindi a noi sviluppatori mettere questo header in ogni web server (e.g., nginx, Caddy, etc.), in ogni strumento di sviluppo web (e.g., Wordpress, Wix, etc)… diamine, in ogni cosa sul pianeta che ritorni una risposta web.</strong></p>
+
+    <p>Il nostro piccolo web server, <a href='https://sitejs.org'>Site.js</a>, lo ha già come impostazione predefinita.</p>
+
+    <p>Sono serviti cinque minuti di sviluppo.</p>
+
+    <p>Lo potete fare.</p>
+
+    <p>Per saperne di più su Google FLoC, leggete <a href='https://plausible.io/blog/google-floc'>qui</a> e <a href='https://cxl.com/blog/floc-dovekey/'>qui.</a></p>
+
+    <p><em>(Se qualche politico fosse attento a quello che sta succedendo in questo secolo e non sia troppo impegnato a strofinarsi le mani e sbavare alla prospettiva di collaborare sia con Google che con Facebook, con la speranza, alla fine, di essere assunto, potrebbe prendere nota e, forse, fare il suo fottuto lavoro per un miglioramento.)</em></p>
+
+    <h3>🚮️ Smettete di usare Chrome e suggerite agli altri di fare lo stesso, se possono.</h3>
+
+    <p><strong>Ricordatevi chi è il cattivo qui: Google</strong> (Alphabet, Inc.), non le persono che sono costrette ad usare il browser di Google per varie ragioni (ad esempio potrebbero non sapere come scaricare ed installare un altro browser o potrebbero essere costrette ad usarlo per motivi di lavor, ecc.)</p>
+
+    <p><strong>Quindi, fate attenzione a non incolpare le vittime, ma spiegate alle persone qual è il problema con Google (“sono un allevamento intensivo di esseri umani ”) e consigliateli, <span class='emphasised'>se possibile</span>, di usare un altro browser.</strong></p>
+
+    <p>Sfortunatamente, visto lo stato delle cose, nessun browser è perfetto. Prendete ad esempio Firefox, è una valida alternativa ma tenete a mente che <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#mozilla'>Mozilla esiste perché Google versa loro circa mezzo miliardo di dollari all'anno per essere il motore di ricerca predefinito</a> sul loro browser. Similmente, Safari è una buona alternativa sulle piattaforme Apple ma ricordatevi che <a href='https://ar.al/2019/01/11/i-was-wrong-about-google-and-facebook-theres-nothing-wrong-with-them-so-say-we-all/#apple'>anche Apple viene pagata miliardi da Google, per violare la vostra privacy</a> (a differenza di Mozilla, Apple non ha bisogno di tutto quel denaro per sopravvivere, ma sicuramente lo <em>vuole</em>). Brave potrebbe sembrare l'alternativa perfetta fino al momento in cui vi rendete conto che <a href='https://basicattentiontoken.org/'>il suo modello di sviluppo è vendere la vostra attenzione</a>. Su Linux, <a href='https://wiki.gnome.org/Apps/Web/'>GNOME Web</a> è una buona opzione, ma non dimenticate che <a href='https://wiki.gnome.org/AdvisoryBoard'>Google è un membro pagante del Comitato Consultivo di GNOME</a>…</p>
+
+    <p>È scoraggiante vedere ovunque i tentacoli di questo maledetto kraken <strong>se mai ci fosse un tempo per creare un'organizzazione indipendente, finanziate con fondi pubblici, per creare un browser privo di cazzate, quel tempo sarebbe ora.</strong></p>
+
+    <h3>🚮️ Proteggetevi e fate vedere agli altri come si fa.</h3>
+
+    <p>Mentre il blocco dei tracker è una partita persa al gioco del gatto contro il topo (ad esempio FLoC, di cui ho parlato precedentemente), sono ancora uno strumento indispensabile per la protezione della privacy degli utenti. Alla <a href='https://small-tech.org'>Small Technology Foundation</a>, ne abbiamo fatto uno chiamato <a href='https://better.fyi'>Better Blocker</a>. Un altro che vi consigliamo, è l'eccellente <a href='https://ublockorigin.com/'>uBlock Origin browser extension</a>. (Abbiamo anche <a href='https://better.fyi/blockerList.txt'>una versione delle regole "Better blocking" che possono essere usate con UBlock Origin</a>.)</p>
+
+    <h3>🚮️ Trovate ed utilizzate delle alternative.</h3>
+
+    <p>Imparate ed usate delle alternative. I siti seguenti contwngono informazioni preziose:</p>
+
+    <ul>
+      <li><a href='https://goodreports.com/'>Good Reports</a></li>
+      <li><a href='https://switching.software/'>Switching Software</a></li>
+    </ul>
+
+    <h3>🚮️ Aiutate a spargere la voce!</h3>
+
+    <p>Link a questa pagina utilizzando gli hashtag <strong>#CleanUpTheWeb</strong> e <strong>#FlocOffGoogle</strong>.</p>
+
+    <h3>🚮️ Scegliete un diverso modello di business.</h3>
+
+    <p><strong class='emphasised'>Alla fine tutto si riduce a questo.</strong> Se il vostro modello di business si basa sul tracciamento e la profilazione delle persone, siete parte del problema.</p>
+
+
+    <p>I fratelli della Silicon Valley vi diranno che è l'unico modo di sviluppo della tecnologia.</p>
+
+    <p>Non lo è.</p>
+
+    <p>Vi diranno che il vostro "viaggio incredibile" inizia con una startup, finanziata da un "angel investment" o da capitali di ventura e finisce quando venite comprati da una Google o Facebook, oppure la vostra società diventa come loro. Unicorni e cose simili...</p>
+
+    <p>Cazzate!</p>
+
+    <p>Potete creare attività piccole e sostenibili. Potete creare cooperative. Potete creare onlus, <a href='https://small-tech.org'> come la nostra.</a></p> Ed all'interno di queste strutture alternative, non ossessionate dal <a href='https://small-tech.org/videos/the-camera-panopticon/'>sapere tutto di tutti</a> e <a href='https://2017.ind.ie/excuse-me/'>dalla crescita infinta con risore finite</a>, potete costruire <strong>strumenti che fanno quello che c'è scritto sulla latta e nulla più.</strong></p>
+
+    <p>Se vi chiedete cosa vi fa felici, non è quello?</p>
+
+    <p>Volete diventare miliardari? Volete tracciare, profilare e manipolare delle persone? Oppure volete solamente <a href='https://small-tech.org/videos/ux-talk/'>fare delle belle cose</a> che <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>migliorano la vita della gente</a> e rendere il mondo un posto più equo e gentile?
+
+    <p>Noi scommettiamo sull'ultima.</p>
+
+    <p>Se vi serve ispirazione, date un'occhiata a cosa (e come) stanno facendo i ragazzi di <a href='https://plausible.io/'>Plausible</a>, for example, o quelli di <a href='https://hey.com'>HEY</a> e <a href='https://basecamp.com'>Basecamp</a>, oppure <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a>, <a href='https://puri.sm/'>Purism</a>, o a cosa stiamo lavorando su <a href='https://sitejs.org'>Site.js</a> e <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>Small Web</a>… non siete i soli a dire no alle cazzate della Silicon Valley.</p>
+
+    <p>Se loro vogliono essere grandi, noi vogliamo essere <a href='https://small-tech.org/about/#small-technology'>piccoli</a>.</p>
+
+    <p>Perché <a href='https://small-tech.org/videos/'>piccolo è bello.</a></p>
+
+    <h2>Vi piace tutto questo? Finanziateci!</h2>
+
+    <p><a href="https://small-tech.org">Small Technology Foundation</a> è una piccola onlus indipendente.</p>
+
+    <p>Esistiamo grazie al sostegno di persone come voi. Se condividete la <a href="https://small-tech.org/about#small-technology">nostra visione</a> e volete sostenere il nostro lavoro, per favore <a href="https://small-tech.org/fund-us">diventate un benefattore oppure fate una donazione</a> oggi ed aiutateci a continuare ad esistere.</p>
+  </main>
+  <footer>
+    <p>Copyright <span class="copyright">©</span> 2021-present Small Technology Foundation. Ground Floor, 71 Lower Baggot Street, D02 P593, Dublin, Ireland. Tutto il contenuto del sito è su licenza Creative Commons Attribution 4.0 International.</p>
+    <p><a href="https://small-tech.org/privacy">La nostra politica sulla privacy</a> è: “esistiamo per proteggerela vostra privacy.”</p>
+    <p><a href="https://github.com/small-tech/cleanuptheweb.org">Codice sorgente.</a></p>
+  </footer>
+</body>
+</html>
