@@ -25,7 +25,7 @@
       </ul>
     </nav>
 
-    <p id='introduction'><strong>Desarrolladores, es hora de elegir un bando:</strong> ¿Ayudarás a deshacernos del rastreo que invade nuestra privacidad en la web, o serás complice?</p>
+    <p id='introduction'><strong>Desarrolladores y desarrolladoras, es hora de elegir un bando:</strong> ¿Ayudarás a deshacernos del rastreo que invade nuestra privacidad en la web, o serás complice?</p>
 
     <h2>¿Qué puedes hacer?</h2>
 
@@ -33,13 +33,13 @@
 
     <p>Entre ellos están <a href='https://better.fyi/trackers/google-analytics.com/'>Google Analytics</a> (uno de los rastreadores más comunes del mundo), <a href='https://better.fyi/trackers/youtube.com/'>videos de YouTube</a>, <a href='https://better.fyi/trackers/facebook.com/'>Widgets de inicio de sesión de Facebook</a> entre otros.</p>
 
-    <p>Estos scripts permiten a los ganaderos de personas como Google y Facebook rastrear a las personas a través de la web a medida que van de un sitio a otro. Cuando los incluyes en un sitio, estas siendo complice de habilitar este rastreo.</p>
+    <p>Estos scripts permiten a grandes tecnológicas como Google y Facebook rastrear a las personas a través de la web a medida que van de un sitio a otro. Cuando los incluyes en un sitio, estas siendo complice de habilitar este rastreo.</p>
 
     <p>Y sí, eso incluye definitivamente <a href='https://www.theregister.com/2017/05/19/open_source_insider_google_amp_bad_bad_bad/'>el jodido Google AMP (fuente en inlgés)</a>.</p>
 
     <h3>🚮️ Dile "FLoC off" a Google!</h3>
 
-    <p>Debido a la constante presión, Google anunció que bloqueará eventualmente el seguimiento a terceros en su navegador Chrome. Suena bien, ¿verdad?Y lo es, hasta que escuche que su propuesta era que<strong>Chrome mismo se encargará de rastrear a las personas en cada sitio que visiten ... a menos que los sitios soliciten lo contrario</strong>, incluyendo el siguiente encabezado en sus respuestas:</p>
+    <p>Debido a la constante presión, Google anunció que bloqueará eventualmente el seguimiento a terceros en su navegador Chrome. Suena bien, ¿verdad? Y lo es, hasta que escuche que su propuesta era que <strong>Chrome mismo se encargará de rastrear a las personas en cada sitio que visiten ... a menos que los sitios soliciten lo contrario</strong>, incluyendo el siguiente encabezado en sus respuestas:</p>
 
     <pre><code>Permissions-Policy: interest-cohort=()</code></pre>
 
@@ -47,13 +47,13 @@
 
     <p>Todas las respuestas web del mundo, no deberían tener que suplicarle a Google: "don, por favor, no viole la privacidad de las personas que visitan mi sitio", pero eso es exactamente lo que Google nos obliga a hacer con su nueva iniciativa FLoC (Federated Learnings of Cohorts).</p>
 
-    <p>(Si tienes problema recordano el nombre de la iniciativa piensa en la palabra "flock" en inglés, que significa "rebaño" como en "un rebaño de obejas", porque claramente así es como Google nos ve, si creen que vamos a aguantar esta mierda)</p>
+    <p>(Si tienes problema recordando el nombre de la iniciativa piensa en la palabra "flock" en inglés, que significa "rebaño" como en "un rebaño de obejas", porque claramente así es como Google nos ve, si creen que vamos a aguantar esta mierda)</p>
 
-    <p><strong>Así que depende de nosotros, los desarrolladores, colocar este encabezado en cada servidor web (Nginx, Caddy, etc.), cada herramienta web (WordPress, Wix, etc) ... diablos, en cualquier cosa que devuelva una respuesta web sobre la faz de la tierra.</strong></p>
+    <p><strong>Así que depende de nosotros, desarrolladores y desarrolladoras, colocar este encabezado en cada servidor web (Nginx, Caddy, etc.), cada herramienta web (WordPress, Wix, etc) ... diablos, en cualquier cosa que devuelva una respuesta web sobre la faz de la tierra.</strong></p>
 
     <p>Nuestro pequeño servidor web <a href='https://sitejs.org'>Site.js</a> ya lo tiene configurado por defecto.</p>
 
-    <p>Tomo cinco minutos implementarlo.</p>
+    <p>Tomó cinco minutos implementarlo.</p>
 
     <p>Puedes hacer esto mismo.</p>
 
@@ -63,7 +63,7 @@
 
     <h3>🚮️ Deja de utilizar Chrome y aconseja a otros y otras que hagan lo mismo si pueden</h3>
 
-    <p><strong>Recuerda quien es el villano aqui: es Google</strong> (Alphabet, Inc.), no las personas que se ven forzadas a utilizar el navegador web de Google por diferentes razones (quizás no saben descargar e instalar un navegador diferente, o es una herramienta requerida para su trabajo, etc.)</p>
+    <p><strong>Recuerda quién es el villano aquí: Google</strong> (Alphabet, Inc.), no las personas que se ven forzadas a utilizar el navegador web de Google por diferentes razones (quizás no saben descargar e instalar un navegador diferente, o es una herramienta requerida para su trabajo, etc.)</p>
 
     <p><strong>Por lo tanto, ten cuidado de no culpar a la víctima, pero hazle saber cuál es el problema con Google ("son una granja industrial para seres humanos") y aconsejelos a que – <span class='emphasised'>en la medida de lo posible</span> utilizen otro navegador.</strong></p>
 
@@ -71,7 +71,7 @@
 
     <p>Es descorazonador ver los tentáculos de estse maldito kraken por todos lados y <strong>si alguna vez hubo un momento para crear una organización independientemente financiada con fondos públicos para construir un navegador web sin tonterías, ese momento es ahora.</strong></p>
 
-    <h3>🚮️ Protéjete y esneña a otros cómo hacer lo mismo.</h3>
+    <h3>🚮️ Protégete y esneña a otros cómo hacer lo mismo.</h3>
 
     <p>Si bien el juego entre el gato y el ratón que se tenía con los bloqueadores de traqueadores es un juego perdido (leer arriba sobre FLoC), todavía son útiles hoy en día para proteger la privacidad de las personas. En <a href='https://small-tech.org'>la fundación Small Technology</a> desarrollamos uno llamado <a href='https://better.fyi'>Better Blocker</a>. Una alternativa que podemos recomendar, es la excelente <a href='https://ublockorigin.com/'>extensión para navegadores uBlock Origin</a>. (Además ofrecemos <a href='https://better.fyi/blockerList.txt'>una versión de las reglas de bloqueo de traqueadores de Better Blocker que puedes utilizar en UBlock Origin</a>.)</p>
 
@@ -88,14 +88,14 @@
 
     <p>Has un enlace a ésta página utilizando las etiquetas <strong>#CleanUpTheWeb</strong> y <strong>#FlocOffGoogle</strong>.</p>
 
-    <h3>🚮️ Elije un modelo de negocios diferente.</h3>
+    <h3>🚮️ Elige un modelo de negocios diferente.</h3>
 
-    <p><strong class='emphasised'>En última instancia, todo se reduce a lo siguiente.</strong> Si tu propio modelo de negocio se basa en el traqueo y categorización de personas, entonces eres parte del problema.</p>
+    <p><strong class='emphasised'>En última instancia, todo se reduce a lo siguiente.</strong> Si tu propio modelo de negocio se basa en el trackeo y categorización de personas, entonces eres parte del problema.</p>
 
 
-    <p>Los chicos del club en el Valle del Silicón, jurarán que es la única forma de desarrollar tecnología.</p>
+    <p>En Silicon Valley jurarán que es la única forma de desarrollar tecnología.</p>
 
-    <p>Están equivocados.</p>
+    <p>Se equivocan.</p>
 
     <p>Te dirán que "el viaje asombroso" comienza con una "startup" financiada por inversionistas ángeles o capital de riesgo y termina cuando Google o Facebook te hacen una oferta o te conviertes en uno más del club. Unicornios y todo lo demás ...</p>
 
@@ -105,13 +105,13 @@
 
     <p>Si te preguntas qué te hace feliz, ¿Acaso no es eso?</p>
 
-    <p>¿Quiéres convertirte en multi-millonario? ¿Quiéres traquear, categorizar y manipular a las personas? O simplemente quieres <a href='https://small-tech.org/videos/ux-talk/'>construir cosas visualmente agradables</a> que <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>mejoran la vida de las personas</a> y hacer del mundo un lugar más justo y amable?
+    <p>¿Quiéres convertirte en multi-millonario? ¿Quiéres trackear, categorizar y manipular a las personas? O simplemente quieres <a href='https://small-tech.org/videos/ux-talk/'>construir cosas visualmente agradables</a> que <a href='http://www.breakingthin.gs/this-is-all-there-is.html'>mejoran la vida de las personas</a> y hacer del mundo un lugar más justo y amable?
 
     <p>Apostamos que es lo último</p>
 
     <p>Si necesitas inspiración, hecha un vistaso a lo qué están haciendo (y cómo lo están haciendo) la gente de <a href='https://plausible.io/'>Plausible</a>, <a href='https://hey.com'>HEY</a>, <a href='https://basecamp.com'>Basecamp</a>, <a href='https://elementary.io/'>elementary OS</a>, <a href='https://owncast.online'>Owncast</a>, <a href='https://www.pine64.org/'>Pine64</a>, <a href='https://starlabs.systems/'>StarLabs</a> y <a href='https://puri.sm/'>Purism</a>. O el trabajo que hacemos con <a href='https://sitejs.org'>Site.js</a> y la <a href='https://ar.al/2020/08/07/what-is-the-small-web/'>web pequeña (fuente en inglés)</a>. No estas solo al decirle <strong>no a todas las patrañas del Valle del Silicón</strong>.</p>
 
-    <p>Cuando ellos quieren ser grandes, nosotros queremos ser <a href='https://small-tech.org/about/#small-technology'>pequeños</a>.</p>
+    <p>Cuando ellos quieren ser grandes, queremos ser <a href='https://small-tech.org/about/#small-technology'>pequeños</a>.</p>
 
     <p>Porque <a href='https://small-tech.org/videos/'>las cosas buenas vienen en envases pequeños</a></p>
 
